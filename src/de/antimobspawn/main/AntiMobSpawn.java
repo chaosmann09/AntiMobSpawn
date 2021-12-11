@@ -8,17 +8,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class AntiMobSpawn extends JavaPlugin {
 
-    private String PREFIX = "§8[§6AntiMobSpawn§8] ";
+    private String PREFIX = "Â§8[Â§6AntiMobSpawnÂ§8] ";
 
     @Override
     public void onEnable() {
-        Bukkit.getConsoleSender().sendMessage(PREFIX + "§aPlugin geladen");
+        Bukkit.getConsoleSender().sendMessage(PREFIX + "Â§aPlugin geladen");
         Bukkit.getPluginManager().registerEvents(new EntitySpawnListener(), this);
         Bukkit.getWorlds().forEach(currentWorld -> currentWorld.getEntities().stream().filter(currentEntity -> (currentEntity instanceof Creature)).forEach(Entity::remove));
     }
 
     @Override
     public void onDisable() {
-        Bukkit.getConsoleSender().sendMessage(PREFIX + "§cPlugin wurde nicht geladen");
+        Bukkit.getConsoleSender().sendMessage(PREFIX + "Â§cPlugin wurde deaktiviert");
     }
 }
