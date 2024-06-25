@@ -2,4 +2,4 @@ name: AntiMobSpawn
 author: Chaosmann09
 version: 1.4
 main: de.antimobspawn.main.AntiMobSpawn
-api-version: 1.18
+api-version: 1.20
